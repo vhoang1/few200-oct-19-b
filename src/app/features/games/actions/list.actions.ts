@@ -1,36 +1,37 @@
 import { createAction, props } from '@ngrx/store';
-import { BookEntity } from '../reducers/list.reducer';
+import { GameEntity } from '../reducers/list.reducer';
 
 let currentId = 99;
 
-export const bookAdded = createAction(
-  '[books] book added',
-  ({ title, author }: { title: string, author: string }) => ({
+export const gameAdded = createAction(
+  '[games] game added',
+  ({ title, publisher, platform }: { title: string, publisher: string, platform: string }) => ({
     entity: {
       id: 'T' + currentId++,
       title,
-      author
-    } as BookEntity
+      publisher,
+      platform
+    } as GameEntity
   })
 );
 
 
-export const loadBookData = createAction(
-  '[books] load the book data'
+export const loadGameData = createAction(
+  '[games] load the game data'
 );
 
-export const bookDataLoadedSuccessfully = createAction(
-  '[books] loaded the book data successfully',
-  props<{ books: BookEntity[] }>()
+export const gameDataLoadedSuccessfully = createAction(
+  '[games] loaded the game data successfully',
+  props<{ games: GameEntity[] }>()
 );
 
 
-export const bookAddedSuccessfully = createAction(
-  '[books] book added successfully',
-  props<{ oldId: string, book: BookEntity }>()
-);
+// export const gameAddedSuccessfully = createAction(
+//   '[books] book added successfully',
+//   props<{ oldId: string, book: BookEntity }>()
+// );
 
-export const bookAddedFailure = createAction(
-  '[books] book added failure',
-  props<{ book: BookEntity, message: string }>()
+export const gameOnloan = createAction(
+  '[ games ] game on loan',
+  props<{ game: GameEntity }>()
 );

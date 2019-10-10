@@ -3,10 +3,16 @@
   <h3>You have no books! Add some!</h3>
 </div>
 <div class="card"
-     *ngFor="let book of model">
+     *ngFor="let game of model">
   <div class="card-body">
-    <h5 class="card-title">{{ book.title }}</h5>
-    <p class="card-text">By {{ book.author}}</p>
-    <em *ngIf="book.isTemporary">Saving...</em>
+    <h5 class="card-title">{{ game.title }}</h5>
+    <input *ngIf="!onloan"
+           type="button"
+           class="btn btn-primary"
+           (click)="OnLoan(game.id, game.title, game.publisher,game.platform)"
+           value="Onloan">
+    <p class="card-text">Publisher: {{ game.publisher}}</p>
+    <p class="card-text"> Platform: {{ game.platform}}</p>
+    <!-- <em *ngIf="book.isTemporary">Saving...</em> -->
   </div>
 </div>

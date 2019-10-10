@@ -1,15 +1,11 @@
 <header class="page-header">
-    <h3>My Games</h3>
-  </header>
-  <div *ngIf="loaded$ | async">
-    <app-entry></app-entry>
-    <app-sorter></app-sorter>
-    <app-list [model]="books$ | async"></app-list>
-  </div>
-  
-  <div class="alert alert-info"
-       *ngIf="(loaded$ | async) === false">
-    <h3>Your Books are loading. Chill.</h3>
-    <img src="https://i.imgur.com/pKV7YwY.gif">
-  </div>
-  
+  <h3>My Games</h3>
+</header>
+<!-- <div *ngIf="loaded$ | async"> -->
+<div>
+  <app-entry></app-entry>
+  <app-list [model]="games$ | async"
+            [onloan]="false"></app-list>
+</div>
+
+<pre>{{ games$ | async | json }}</pre>

@@ -6,16 +6,19 @@ import { ListComponent } from './components/list/list.component';
 // import { featureName, reducers } from './reducers';
 // import { SorterComponent } from './components/sorter/sorter.component';
 import { GamesComponent } from './games.component';
+import { StoreModule } from '@ngrx/store';
+import { featureName, reducers } from './reducers';
+import { OnloanComponent } from './onloan.component';
 // import { EffectsModule } from '@ngrx/effects';
 // import { AppEffects } from './effects/app.effects';
 // import { ListEffects } from './effects/list.effects';
 
 
 @NgModule({
-  declarations: [GamesComponent, EntryComponent, ListComponent],//, SorterComponent],
+  declarations: [GamesComponent, EntryComponent, ListComponent, OnloanComponent], // , SorterComponent],
   imports: [
     CommonModule,
-    //StoreModule.forFeature(featureName, reducers),
+    StoreModule.forFeature(featureName, reducers),
     HttpClientModule,
     // EffectsModule.forFeature([AppEffects, ListEffects])
   ],

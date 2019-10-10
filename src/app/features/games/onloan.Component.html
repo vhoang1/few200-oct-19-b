@@ -1,0 +1,9 @@
+<header class="page-header">
+    <h3>On Loan Games</h3>
+</header>
+<div>
+    <app-list [model]="games$ | async"
+              [onloan]="true"></app-list>
+</div>
+
+<pre>{{ games$ | async | json }}</pre>

@@ -5,6 +5,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { BooksComponent } from './features/books/books.component';
 import { GamesComponent } from './features/games/games.component';
+import { OnloanComponent } from './features/games/onloan.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'games',
     component: GamesComponent
+  },
+  {
+    path: 'onloan',
+    component: OnloanComponent
   },
   {
     path: '**',
