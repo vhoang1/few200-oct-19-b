@@ -1,0 +1,4 @@
+<div class="alert alert-success">
+  You have {{ (items$ | async)?.totalTodos}} todos, {{ (items$ | async)?.completedTodos }} are done and
+  {{ ( items$ | async)?.remainingTodos }} are remaining.
+</div>

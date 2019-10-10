@@ -1,0 +1,11 @@
+<header>
+  <h5>Your Todo List</h5>
+</header>
+<div class="row">
+  <app-todo-list-entry title="Enter Something Here To Update Your List"
+                       (addedItem)="addThingToList($event)"></app-todo-list-entry>
+</div>
+<div class="row">
+  <app-todo-list-list (markedComplete)="markComplete($event)"
+                      [items]="stuff$ | async"></app-todo-list-list>
+</div>

@@ -1,0 +1,12 @@
+<div class="btn-group"
+     role="group"
+     aria-label="Basic example">
+  <button type="button"
+          [disabled]="sortingByTitle$ | async"
+          (click)="sortByTitle()"
+          class="btn btn-secondary">Title</button>
+  <button type="button"
+          [disabled]="sortingByAuthor$ | async"
+          (click)="sortByAuthor()"
+          class="btn btn-secondary">Author</button>
+</div>

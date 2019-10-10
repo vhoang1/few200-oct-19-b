@@ -1,0 +1,12 @@
+<header>
+  <h6>{{ title }}</h6>
+</header>
+<div class="form-group">
+  <label for="item">Item</label>
+  <input class="form-control"
+         #cat>
+  <input type="button"
+         (click)="addItem(cat)"
+         class="btn btn-primary"
+         value="Add Item">
+</div>

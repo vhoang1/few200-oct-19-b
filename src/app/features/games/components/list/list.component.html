@@ -1,0 +1,12 @@
+<div class="alert alert-danger"
+     *ngIf="model.length === 0">
+  <h3>You have no books! Add some!</h3>
+</div>
+<div class="card"
+     *ngFor="let book of model">
+  <div class="card-body">
+    <h5 class="card-title">{{ book.title }}</h5>
+    <p class="card-text">By {{ book.author}}</p>
+    <em *ngIf="book.isTemporary">Saving...</em>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+{
+  "counter": {
+    "count": 0,
+    "by": 1
+  },
+  "booksFeature": {
+    "books": {
+      "list": {
+        "ids": [
+          "1",
+          "2"
+        ],
+        "entities": {
+          "1": {
+            "id": "1",
+            "title": "Book 1",
+            "author": "books 1 author"
+          },
+          "2": {
+            "id": "2",
+            "title": "Book 2",
+            "author": "books 2 author"
+          }
+        }
+      }
+    }
+  }
+}
